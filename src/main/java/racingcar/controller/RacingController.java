@@ -43,12 +43,7 @@ private final GetRacingCarResultService getRacingCarResultService;
 
     @GetMapping("/plays")
     public ResponseEntity<List<RacingResponseDto>> playRacingCar() {
-//        List<RacingResponseDto> racingResponseDtos= new ArrayList<>();
-//        List<RacingCar> cars = raceService.carInit("박근경,박철");
-//        RacingCarResult racingCarResult = raceService.race(cars, 3);
-//        saveRacingCarService.saveRacingCarResult(racingCarResult);
-//        RacingResponseDto racingResponseDto= new RacingResponseDto(racingCarResult.getWinners(),racingCarResult.getCars());
-//        racingResponseDtos.add(racingResponseDto);
+
         List<RacingResponseDto> racingResponseDtos = getRacingCarResultService.getRacingCarResult();
         return ResponseEntity.ok().body(racingResponseDtos);
     }
