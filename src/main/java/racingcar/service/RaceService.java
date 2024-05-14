@@ -28,7 +28,6 @@ public class RaceService {
         //new RaceNumberValidator().validate(count);
         System.out.println("실행결과");
         for (int i=0; count>i;i++){
-            System.out.println(1);
             carGo(cars);
         }
         int maxPosition=getMaxPosition(cars);
