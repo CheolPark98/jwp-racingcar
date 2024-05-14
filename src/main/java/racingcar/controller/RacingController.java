@@ -42,7 +42,7 @@ private final GetRacingCarResultService getRacingCarResultService;
     }
 
     @GetMapping("/plays")
-    public ResponseEntity<List<RacingResponseDto>> playRacingCar() {
+    public ResponseEntity<List<RacingResponseDto>> getRacingCarResult() {
 
         List<RacingResponseDto> racingResponseDtos = getRacingCarResultService.getRacingCarResult();
         return ResponseEntity.ok().body(racingResponseDtos);
